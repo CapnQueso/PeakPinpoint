@@ -2,9 +2,9 @@
 A work in progress by capnqueso (eli) with hopes to be able to use publically available OSINT data to be able to aid GEOINT searches by pinpointing the locations of a camera based on mountain ridgelines in a photo or video, while not requiring exif / metadata to determine precise location. 
 
 This project will be free forever for everyone.
-
+                                         
 # PROJECT ROAD MAP
-v0.1 -> one skyline 
+v0.1 -> one skyline                                          
 v0.2 -> N skylines 
 v0.3 -> rank skylines 
 v0.4 -> DEM matching
