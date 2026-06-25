@@ -33,7 +33,7 @@ def detect_edges(image):
 
 def extract_candidate_ridges(edges):
     # finds candidate ridge contours and returns a list of said contours
-    contours, _ = cv2.findContours(edges, cv2.RETR_LIST, cv2.CHAIN_APPROX_NONE)
+    contours, _ = cv2.findContours(edges, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
 
     candidates = []
 
@@ -44,7 +44,18 @@ def extract_candidate_ridges(edges):
 
         x, y, w, h = cv2.boundingRect(contour)
 
-        score = w * 2 - y + area * 0.01
+        if w < width * 0.2:
+            continue
+
+        if h < height * 0.05:
+            continue
+
+        # add aspect ratio check to filter out stupid shapes
+        aspect_ratio = w / h if h != 0 else 0
+        if aspect_ratio > 15:
+            continue
+
+        score = w * 3 + h * 2 - y + area * 0.01
 
         candidates.append({"contour": contour, "score": score, "x": x, "y": y, "w": w, "h": h, "area": area})
     

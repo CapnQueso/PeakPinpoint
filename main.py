@@ -19,6 +19,6 @@ for i, candidate in enumerate(candidates[:10]):
 
 plt.imshow(cv2.cvtColor(result, cv2.COLOR_BGR2RGB))
 
-plt.title("PeakPinpoint Skyline Detection Test v0.1")
+plt.title("PeakPinpoint Skyline Detection Test v0.2.1")
 plt.axis("off")
 plt.show()
