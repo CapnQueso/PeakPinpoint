@@ -14,5 +14,5 @@ v0.7 -> Performance pass
 v0.8 -> cli release                                                                                  
 v0.9 -> Desktop exe package, finishing touches                                                                                  
 v1.0 -> Public Release                                                                                  
-v1.1 -> AI integration to narrow down candidates faster
-v1.1+ -> more helpful features, possibly a gui
+v1.1 -> AI integration to narrow down candidates faster                                                                            
+v1.1+ -> more helpful features, possibly a gui                                                                            
